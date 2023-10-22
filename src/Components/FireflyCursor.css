@@ -1,0 +1,27 @@
+/* FireflyCursor.css */
+.App{
+  cursor: none;
+}
+
+.firefly-cursor {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, hsl(54, 90%, 55%) 60%, transparent); /* Radial gradient background */
+  border-radius: 50%;
+  mix-blend-mode: screen; /* Create the glowing effect */
+  pointer-events: none; /* Make sure it doesn't interfere with interactions */
+  animation: fireflyGlow 0.5s alternate infinite;
+  z-index: 999;
+}
+
+@keyframes fireflyGlow {
+  0% {
+    background: radial-gradient(circle, #f8e856 60%, transparent);
+    box-shadow: 0 0 10px #f8e856 ;
+  }
+  100% {
+    background: radial-gradient(circle, #f8e856  60%, transparent);
+    box-shadow: 0 0 10px #f8e856 ;
+  }
+}

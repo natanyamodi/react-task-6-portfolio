@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .App-logo {
@@ -7,32 +10,91 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+video {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 55px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
 }
 
-.App-link {
-  color: #61dafb;
+@font-face {
+  font-family: 'KaushanScript-Regular';
+  src: url('./fonts/KaushanScript-Regular.ttf') format('truetype');
 }
 
-@keyframes App-logo-spin {
+@font-face {
+  font-family: 'Enchant';
+  src: url('./fonts/Enchant.ttf') format('truetype');
+}
+
+.head{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+}
+
+.head p{
+  margin-bottom: 0;
+  font-family: 'Enchant';
+  color: rgb(255, 255, 255);
+  font-size: 70px;
+  letter-spacing: 2px;
+  font-style: italic;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(30)  forwards;
+}
+
+@keyframes typing {
   from {
-    transform: rotate(0deg);
+    width: 0;
   }
   to {
-    transform: rotate(360deg);
+    width: 100vh;
   }
 }
+
+.bio{
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  padding: 5px;
+  margin-top: 0;
+  font-family: 'Sans Serif';
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  letter-spacing: 2px;
+  border-radius: 20px;
+}
+
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.icon-link {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 7px 10px;
+}
+
+.icon {
+  font-size: 40px; /* Adjust the icon size as needed */
+  margin: 5px; /* Add margin for spacing between icons */
+}
+
